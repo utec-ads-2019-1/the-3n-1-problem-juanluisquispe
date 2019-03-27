@@ -16,8 +16,8 @@
 
 using namespace std;
 
-int alg(int a){
-	int counter = 1;
+long long int alg(long long int a){
+	long long int counter = 1;
 	while(a != 1){
 		if(a % 2 == 1){
 			a = 3*a + 1;
@@ -30,7 +30,7 @@ int alg(int a){
 }
 
 int main() {
-	int num1 , num2 , prevrun = 0;
+	long long int num1 , num2 , prevrun = 0;
 	while(cin >> num1){
 		prevrun = 0;
 		cin >> num2;
