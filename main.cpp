@@ -14,6 +14,7 @@
 #define all(v) v.begin(),v.end()
 #define mp(x,y) make_pair(x,y)
 
+
 using namespace std;
 
 long long int alg(long long int a){
