@@ -36,6 +36,11 @@ int main() {
 		prevrun = 0;
 		cin >> num2;
 		cout << num1 << ' ' << num2;
+		if(num2 < num1 ){
+			long long int temp = num1;
+			num1 = num2;
+			num2 = temp;
+		}
 		for(int i = num1 ; i <= num2 ; i++){
 			prevrun = max(prevrun , alg(i));
 		}
