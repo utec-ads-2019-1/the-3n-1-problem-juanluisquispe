@@ -14,10 +14,11 @@
 #define all(v) v.begin(),v.end()
 #define mp(x,y) make_pair(x,y)
 
+
 using namespace std;
 
-int alg(int a){
-	int counter = 1;
+long long int alg(long long int a){
+	long long int counter = 1;
 	while(a != 1){
 		if(a % 2 == 1){
 			a = 3*a + 1;
@@ -30,11 +31,16 @@ int alg(int a){
 }
 
 int main() {
-	int num1 , num2 , prevrun = 0;
+	long long int num1 , num2 , prevrun = 0;
 	while(cin >> num1){
 		prevrun = 0;
 		cin >> num2;
 		cout << num1 << ' ' << num2;
+		if(num2 < num1 ){
+			long long int temp = num1;
+			num1 = num2;
+			num2 = temp;
+		}
 		for(int i = num1 ; i <= num2 ; i++){
 			prevrun = max(prevrun , alg(i));
 		}
